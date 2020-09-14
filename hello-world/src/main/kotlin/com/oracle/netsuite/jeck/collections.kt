@@ -1,6 +1,7 @@
 package com.oracle.netsuite.jeck
 
 fun lists() {
+    println("list")
     // immutable
     val listOfStrings: List<String> = listOf() // empty list, since this is val, it's gonna be an empty list
     val listOfWhatevers: List<Any> = listOf() // Any is like an open data type, it can be anything. ---> THIS IS NOT A SUGGESTED PRACTICE.
@@ -28,6 +29,7 @@ fun lists() {
  * Sets are like lists but ordering is not important
  */
 fun sets(){
+    println("set")
     // immutable
     val setOfStrings: Set<String> = setOf() // empty list, since this is val, it's gonna be an empty list
     val setOfWhatevers: Set<Any> = setOf() // Any is like an open data type, it can be anything. ---> THIS IS NOT A SUGGESTED PRACTICE.
@@ -52,6 +54,7 @@ fun sets(){
  * maps are key value pair lists
  */
 fun maps() {
+    println("map")
     // immutable
     val mapOfStrings: Map<String, String> = mapOf() // empty list, since this is val, it's gonna be an empty list
     val mapOfWhatevers: Map<Any, Any> = mapOf() // Any is like an open data type, it can be anything. ---> THIS IS NOT A SUGGESTED PRACTICE.
