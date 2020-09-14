@@ -1,15 +1,16 @@
 package com.oracle.netsuite.jeck
 
+import java.math.BigDecimal
 import java.time.LocalDate
 
-fun basicInt(): Int {
+fun basicInt() {
     val basicInt: Int = 4
     val basicIntNoTypeDeclaration = 5 // type inference
 
     val basicIntUndeclared: Int
 //    basicIntUndeclared = "A" // error due type mismatch
 
-    return basicInt
+    println(basicInt)
 }
 
 fun moreReadableInt(): Int {
@@ -32,10 +33,20 @@ fun today(): LocalDate {
     return LocalDate.now()
 }
 
+// and other
+fun javaBigDecimals(){
+    // has other number types such as float, double and long (long int)
+    // can also use Java's BigDecimal for more precision
+    val bigDecimalTen = BigDecimal.TEN
+    val bigDecimalOfNumber = BigDecimal(88.554423)
+}
+
 fun nullables(){
 
-    // without typecasting, you can set a variable to null
+    // without typecasting, you initialize a variable to null
     val basicString = null
+    var basicString2 = "A"
+//    basicString2 = null // error
 
     // with typecasting, variables cannot be null
 //    val basicStringType: String = null // error
