@@ -10,6 +10,40 @@ import com.oracle.netsuite.jeck.presentation.PrinterPresenter
 import com.oracle.netsuite.jeck.presentation.common.ViewModel
 import java.time.LocalDate
 
+interface LivingRoom
+interface DiningRoom
+interface Sewer
+interface Plumbing
+interface Electrical
+interface MaidRoom
+interface MasterBedroom
+interface Bedroom
+interface Garden
+interface Garage
+
+abstract class BasicHouse(){}
+
+class SubdivisionHouse: BasicHouse(), LivingRoom, Garden, DiningRoom, Sewer, Plumbing, Electrical, MaidRoom, MasterBedroom, Garage {}
+class StudioApartment: BasicHouse(), LivingRoom, DiningRoom, Bedroom {}
+class TownHouse: BasicHouse(), LivingRoom, DiningRoom, MasterBedroom, Garage {}
+
+
+interface Employee
+interface Employer
+interface SuiRate
+interface Payroll
+interface Paycheck
+
+open class TaxFile(): Employee {
+    /** common functionality of the tax files - all files have the employee */
+}
+
+class PeriodicTaxFile: TaxFile(), SuiRate, Payroll, Paycheck {
+    /** interfaces implement specific handling for this file */
+}
+class QuarterlyTaxFile: TaxFile(), Employer, Payroll, Paycheck
+class AnnualTaxFile: TaxFile(), Employer, Payroll, Paycheck
+
 fun main(){
     val approvedTor: TimeOffRecord = ApproveTimeOff(88).execute()
     val finishedOnboardingTask: OnboardingTask = CompleteOnboardingTask(98).execute()
