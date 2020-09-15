@@ -4,7 +4,7 @@ import com.oracle.netsuite.jeck.domain.entity.TimeOffRecord
 import com.oracle.netsuite.jeck.domain.entity.TimeOffRecord2
 import com.oracle.netsuite.jeck.domain.entity.TimeOffStatus
 
-class CopyTimeOff {
+object CopyTimeOff {
     fun copy1(timeOff: TimeOffRecord): TimeOffRecord{
         /** readable toString() - more apparent when testing */
         println(timeOff.toString())
